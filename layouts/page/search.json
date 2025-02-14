@@ -1,0 +1,13 @@
+[
+        {{- $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+        {{- $notHidden := where $pages "Params.hidden" "!=" true -}}
+        {{- range $index, $element := $notHidden -}}
+        {{- if $index -}}, {{- end }}
+        {
+            "title": {{ .Title | jsonify }},
+            "date": {{ .Date.Format "2006-01-02" | jsonify }},
+            "permalink" : {{ .Permalink | jsonify }},
+            "content": {{ .Plain | jsonify }}
+        }
+        {{- end -}}
+]

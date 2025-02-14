@@ -1,0 +1,35 @@
+{{ define "main" }}
+<form class="search-form" data-json="/search/index.json">
+    <p>
+        <input name="keyword" placeholder="Type something..." />
+    </p>
+</form>
+
+<h3 class="search-result--title"></h3>
+<div class="search-result--list"></div>
+
+<script>
+    window.searchConfig = {
+        url: '/search/index.json',
+        form: '.search-form',
+        input: 'input[name="keyword"]',
+        resultTitle: '.search-result--title',
+        resultList: '.search-result--list'
+    };
+    window.searchResultTitleTemplate = '找到 #PAGES_COUNT 个结果';
+</script>
+
+<script>
+    window.searchResultTitleTemplate = "#PAGES_COUNT 个结果 （用时 #TIME_SECONDS 秒）"
+
+    window.searchConfig = {
+        url: '/search/index.json',
+        form: '.search-form',
+        input: 'input[name="keyword"]',
+        resultTitle: '.search-result--title',
+        resultList: '.search-result--list'
+    }
+</script>
+
+<script src="/ts/search.js" defer></script>
+{{ end }}

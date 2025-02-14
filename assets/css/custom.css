@@ -1,0 +1,30 @@
+/* 导航菜单样式 */
+.main-nav {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: var(--card-background);
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--shadow-l1);
+}
+
+.main-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu li a {
+    color: var(--body-text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: var(--tag-border-radius);
+    transition: background-color 0.3s ease;
+}
+
+.main-menu li a:hover {
+    background-color: var(--card-background-selected);
+    color: var(--accent-color);
+}

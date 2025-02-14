@@ -1,0 +1,17 @@
+# Hugo default output directory
+/public/
+
+# Hugo generated resources directory
+/resources/_gen/
+
+# Hugo build lock file
+.hugo_build.lock
+
+# macOS system files
+.DS_Store
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo

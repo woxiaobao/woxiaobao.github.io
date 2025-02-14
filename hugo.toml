@@ -1,0 +1,37 @@
+baseURL = 'https://woxiaobao.github.io/'
+languageCode = 'zh-cn'
+DefaultContentLanguage = 'zh-cn'
+title = '宝林的博客'
+theme = "hugo-theme-stack"
+hasCJKLanguage = true
+
+[[menus.main]]
+name = "首页"
+url = "/"
+weight = 1
+params = { icon = "home" }
+
+[[menus.main]]
+name = "归档"
+url = "/archives"
+weight = 2
+params = { icon = "archive" }
+
+[[menus.main]]
+name = "搜索"
+url = "/search"
+weight = 3
+params = { icon = "search" }
+
+[params.widgets]
+[[params.widgets.homepage]]
+type = "archives"
+
+[[params.widgets.homepage]]
+type = "search"
+
+[[params.widgets.page]]
+type = "toc"
+
+[params.search]
+enable = true
