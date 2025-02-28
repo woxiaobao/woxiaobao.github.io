@@ -93,9 +93,7 @@ flowchart LR
     LocalCache --> Redis[Redis缓存]
     Redis --> DB[数据库]
     
-    style LocalCache fill:#f9f,stroke:#333,stroke-width:2px
-    style Redis fill:#bbf,stroke:#333,stroke-width:2px
-    style DB fill:#bfb,stroke:#333,stroke-width:2px
+    
 ```
 
 ### 2.2 实践应用
@@ -174,9 +172,7 @@ flowchart TD
     C --> E[磁盘文件]
     D --> E
     
-    style A fill:#f9f,stroke:#333,stroke-width:2px
-    style B fill:#bbf,stroke:#333,stroke-width:2px
-    style E fill:#bfb,stroke:#333,stroke-width:2px
+
 ```
 
 ### 3.2 实践应用

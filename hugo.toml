@@ -17,11 +17,6 @@ url = "/archives"
 weight = 2
 params = { icon = "archive" }
 
-[[menus.main]]
-name = "搜索"
-url = "/search"
-weight = 3
-params = { icon = "search" }
 
 [params.widgets]
 [[params.widgets.homepage]]

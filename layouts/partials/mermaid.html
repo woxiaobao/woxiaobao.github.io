@@ -1,18 +1,25 @@
 {{ if .Page.Store.Get "hasMermaid" }}
     <script src="https://unpkg.com/mermaid@10.6.1/dist/mermaid.min.js"></script>
     <script>
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'default',
-            securityLevel: 'loose',
-            flowchart: {
-                useMaxWidth: true,
-                htmlLabels: true
-            },
-            sequence: {
-                useMaxWidth: true,
-                htmlLabels: true
-            }
-        });
+        const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+        const updateMermaidTheme = (e) => {
+            const theme = e.matches ? 'dark' : 'default';
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: theme,
+                securityLevel: 'loose',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                },
+                sequence: {
+                    useMaxWidth: true,
+                    htmlLabels: true
+                }
+            });
+        };
+        
+        darkModeMediaQuery.addListener(updateMermaidTheme);
+        updateMermaidTheme(darkModeMediaQuery);
     </script>
 {{ end }}
